@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.navcontainer{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: black;
+  }
+  .logo{
+    position: absolute;
+    height: 40px;
+    width: 95px;
+    left: 3%;
+    bottom: 10px;
+  }
+  .logo img{
+    height: 100%;
+    width: 100%;
+  }
+  .toggle, [id^=drop] {
+   display: none;
+  }
+  nav {
+    float: right;
+  }
+  nav ul {
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+  }
+  nav ul li {
+    display: inline-block;
+    float: left;
+    background-color: black;
+  }
+  nav a {
+    display: block;
+    padding: 0 20px;
+    color: white;
+    font-size: 25px;
+    line-height: 60px;
+    text-decoration: none;
+  }
+  nav ul li ul li:hover {
+    background:rgb(182, 154, 154); 
+  }
+  nav a:hover { 
+    background-color: red; 
+  }
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+  }
+  nav ul li:hover>ul { 
+    display: inherit; 
+  }
+  nav ul ul li {
+    width: auto;
+    float: none;
+    display: list-item;
+    position: relative;
+  }
+  nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 95px;
+  }
+
+  @media all and (max-width : 650px) {  
+    nav { 
+      margin: 0;
+      float: left; 
+    }
+    .logo{
+      position: absolute;
+      left: 80%;
+    }
+    .toggle ~ a,
+     .menu { 
+      display: none; 
+    }
+    .toggle {
+      display: block;
+      background-color: rgb(14, 12, 12);
+      padding: 0 20px;
+      color: rgb(44, 247, 8);
+      font-size: 22px;
+      font-weight:bold;
+      line-height: 60px;
+    }
+    .toggle:hover { 
+      background-color: rgb(85, 11, 244); 
+    }
+    [id^=drop]:checked ~ ul { 
+      display: block; 
+    }
+    nav ul li {
+      display: block;
+      width: 100%;
+    }
+    nav ul ul .toggle,
+     nav ul ul a { 
+      padding: 0 40px; 
+    }
+    nav ul ul ul a { 
+      padding: 0 80px; 
+    }
+    nav a:hover,
+     nav ul ul a { 
+      background-color: blue; 
+      color: white;
+    }
+    nav ul li ul li .toggle,
+     nav ul ul a { 
+      background-color: black; 
+    }
+    nav ul ul {
+      float: none;
+      position: static;
+      color: white;
+    }
+    nav ul li:hover > ul { 
+      display: none; 
+    }
+    nav ul ul li {
+      display: block;
+      width: 100%;
+      margin-top: 2%;
+    }
+    nav ul ul ul li { 
+      position: static;
+    }
+    }
+    
+    @media all and (max-width : 330px) {
+    
+    nav ul li {
+      display: block;
+      width: 94%;
+    }
+    }
